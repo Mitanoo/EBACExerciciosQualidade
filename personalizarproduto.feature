@@ -26,8 +26,15 @@
             Então o produto deve ser considerado mais de um no carrinho
 
             Esquema do Cenário: Permitir até o limite de 10 produtos
-            Quando eu escolher entre <nao permitir> e <permitir> produtos
-            Então <permitir> deve ser adicionada no carrinho
+            Quando eu escolher <quantidade>
+            Então <acao> deve acontecer
 
-            | nao permitir | permitir            | nao permitir  |
-            | 0            | 1, 2, 3... 8, 9, 10 | 11, 12, 13... |
+            | quantidade | acao         |
+            | 0          | não permitir |
+            | 1          | permitir     |
+            | 2          | permitir     |
+            | 5          | permitir     |
+            | 9          | permitir     |
+            | 10         | permitir     |
+            | 11         | não permitir |
+            | 18         | não permitir |
